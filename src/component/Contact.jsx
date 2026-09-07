@@ -21,6 +21,10 @@ const Contact = () => {
           Let's build something.
         </p>
 
+        <p className="contact-availability fade-target contact-el">
+          Open to internship/junior roles
+        </p>
+
         <div className="contact-links">
           
           <a className="contact-link fade-target contact-el"
@@ -35,6 +39,15 @@ const Contact = () => {
             >
             GitHub — Pqmda
           </a>
+
+          <a className="contact-link fade-target contact-el"
+            href="https://www.linkedin.com/in/cedric-valencia-4970a9377/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn — Cedric Valencia
+          </a>
+          
         </div>
       </div>
     </div>

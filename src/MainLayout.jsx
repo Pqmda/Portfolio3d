@@ -10,6 +10,7 @@ import { OrbitControls } from '@react-three/drei'
 import { gsap } from 'gsap'
 import AboutMe from './component/AboutMe'
 import Contact from './component/Contact'
+import ResumeButton from './component/ResumeButton'
 
 const MainLayout = () => {
   const spotRef = useRef()
@@ -59,6 +60,7 @@ const MainLayout = () => {
             <div className = 'Title'>
                 <h1>Portfolio</h1>
             </div>
+            <ResumeButton />
             <p ref={textRef} className='view-text' style={activeViewText.style}>
               {activeViewText.content}
             </p>
