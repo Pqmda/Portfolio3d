@@ -8,6 +8,8 @@ import Projects from './component/Projects'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { gsap } from 'gsap'
+import AboutMe from './component/AboutMe'
+import Contact from './component/Contact'
 
 const MainLayout = () => {
   const spotRef = useRef()
@@ -66,9 +68,9 @@ const MainLayout = () => {
                 controlsRef={controlsRef}
                 cameraPosition={[5, 7, 9]}
                 lookAt={[0, 3, 0]}
-                displayText={'CEDRIC VALENCIA'}
-                textStyle={{ top: '45vh', left: '20vw', right: 'auto', bottom: 'auto' }}
-                onSelectText={setActiveViewText}
+                onSelectText={() => {
+                  setActiveSection('about')
+                }}
                 style={{top: '52.4vh', right: '20vw'}}
             />
             <Line  
@@ -107,16 +109,18 @@ const MainLayout = () => {
                 controlsRef={controlsRef}
                 cameraPosition={[10, 20, 10]}
                 lookAt={[0, 4, 0]}
-                displayText={''}
-                textStyle={{ top: 'auto', right: '6vw', bottom: '12vh', left: 'auto' }}
+                displayText={'CONTACT'}
+                textStyle={{ top: '8vh', right: '6vw', bottom: 'auto', left: 'auto' }}
                 onSelectText={(payload) => {
                   setActiveViewText(payload)
-                  setActiveSection('')
+                  setActiveSection('contact')
                 }}
                 style={{ top: '10vh', right: '40vw' }}
             />
 
-            {activeSection === 'projects' && <Projects />}
+           {activeSection === 'projects' && <Projects />}
+           {activeSection === 'about' && <AboutMe />}
+            {activeSection === 'contact' && <Contact />}
 
             <ExitViewButton              
                 label={'>'}
@@ -144,6 +148,7 @@ const MainLayout = () => {
                     target={[0, 4, 0]} 
                     enableRotate={false}
                     enableZoom={false}
+                    enablePan={false}
                     />
                     <spotLight
                     ref={spotRef}

@@ -1,0 +1,41 @@
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  mix-blend-mode: difference;
+}
+
+.cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  will-change: transform, opacity;
+  mix-blend-mode: difference;
+}
+
+.cursor__ball--big {
+  transform-origin: 50px 50px;
+}
+
+.cursor__ball--small {
+  transform-origin: 5px 5px;
+}
+
+.cursor__ball circle {
+  fill: #f7f8fa;
+  mix-blend-mode: difference;
+  shape-rendering: geometricPrecision;
+}
+
+.has-custom-cursor,
+.has-custom-cursor * {
+  cursor: none !important;
+}
+
+@media (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}

@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 const CustomStyle = {
     position: 'absolute',
     className: 'Line',
