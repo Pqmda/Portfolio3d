@@ -28,6 +28,7 @@ const CustomCursor = () => {
     const yToSmall = gsap.quickTo(smallBall, 'y', { duration: 0.1, ease: 'power3.out' })
 
     const onMouseMove = (e) => {
+      showCursor()
       xToBig(e.clientX - BIG_BALL_SIZE / 2)
       yToBig(e.clientY - BIG_BALL_SIZE / 2)
       xToSmall(e.clientX - SMALL_BALL_SIZE / 2)
@@ -54,19 +55,19 @@ const CustomCursor = () => {
       gsap.to([bigBall, smallBall], { autoAlpha: 1, duration: 0.15 })
     }
 
-    document.body.addEventListener('mousemove', onMouseMove)
+    window.addEventListener('mousemove', onMouseMove)
     document.addEventListener('mouseover', onMouseHover)
     document.addEventListener('mouseout', onMouseHoverOut)
-    document.addEventListener('mouseleave', hideCursor)
-    document.addEventListener('mouseenter', showCursor)
+    window.addEventListener('mouseleave', hideCursor)
+    window.addEventListener('mouseenter', showCursor)
 
     return () => {
       document.body.classList.remove('has-custom-cursor')
-      document.body.removeEventListener('mousemove', onMouseMove)
+      window.removeEventListener('mousemove', onMouseMove)
       document.removeEventListener('mouseover', onMouseHover)
       document.removeEventListener('mouseout', onMouseHoverOut)
-      document.removeEventListener('mouseleave', hideCursor)
-      document.removeEventListener('mouseenter', showCursor)
+      window.removeEventListener('mouseleave', hideCursor)
+      window.removeEventListener('mouseenter', showCursor)
       gsap.killTweensOf([bigBall, bigCircle, smallBall])
     }
   }, [])

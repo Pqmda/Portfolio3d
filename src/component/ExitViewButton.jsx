@@ -51,7 +51,7 @@ const ExitViewButton = ({
       ease: 'power2.inOut',
     })
 
-    gsap.to('.camera-view-button', {
+    gsap.to('.camera-view-button, .CameraLabel', {
         autoAlpha: 1,
         y: 0,
         duration: 1,

@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import Hotel from '../assets/Images/Czarina.png'
 import Port2d from '../assets/Images/Port2d.png'
 import tableLampImage from '../assets/Images/Minimalist Table Lamp.png'
-import armchairImage from '../assets/Images/Textured Armchair Close-Up.png'
+import budoir from '../assets/Images/Budoir.png'
 
 const Projects = () => {
   const projectCards = [
@@ -26,20 +26,12 @@ const Projects = () => {
       url: 'https://cedric-valencia-portfolio.vercel.app',
     },
     {
-      src: tableLampImage,
-      alt: 'Table lamp project preview',
-      title: 'Project 3',
-      subtitle: 'Premium',
+      src: budoir,
+      alt: 'Budoir',
+      title: 'Budoir',
+      subtitle: 'https://github.com/Pqmda/Bag3d',
       buttonLabel: 'See project',
-      url: 'https://github.com/Pqmda',
-    },
-    {
-      src: armchairImage,
-      alt: 'Armchair project preview',
-      title: 'Project 4',
-      subtitle: 'Minimalistic',
-      buttonLabel: 'See project',
-      url: 'https://github.com/Pqmda',
+      url: 'https://budoir-3d.vercel.app/',
     },
   ]
 

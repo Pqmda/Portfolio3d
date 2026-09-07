@@ -4,6 +4,7 @@ import Room from './component/Room'
 import CameraViewButton from './component/CameraViewButton'
 import ExitViewButton from './component/ExitViewButton'
 import Line from './component/Line'
+import CameraLabel from './component/CameraLabel'
 import Projects from './component/Projects'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
@@ -83,6 +84,10 @@ const MainLayout = () => {
                     position: 'absolute',
                 }}
             />
+            <CameraLabel style={{ top: '53vh', right: '13vw' }}>
+              About Me
+            </CameraLabel>
+
             <CameraViewButton
                 label={'2'}
                 cameraRef={cameraRef}
@@ -105,6 +110,10 @@ const MainLayout = () => {
                     position: 'absolute',
                 }}
             />
+            <CameraLabel style={{ bottom: '34vh', left: '12vw' }}>
+              Projects
+            </CameraLabel>
+
             <CameraViewButton
                 label={'3'}
                 cameraRef={cameraRef}
@@ -119,6 +128,18 @@ const MainLayout = () => {
                 }}
                 style={{ top: '10vh', right: '40vw' }}
             />
+
+            <Line  
+                style={{
+                    top: '12.5vh',
+                    left: '51vw',
+                    width: '5vw',
+                    position: 'absolute',
+                }}
+            />
+            <CameraLabel style={{ top: '10.5vh', right: '34vw' }}>
+              Contact
+            </CameraLabel>
 
            {activeSection === 'projects' && <Projects />}
            {activeSection === 'about' && <AboutMe />}

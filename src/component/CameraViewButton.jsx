@@ -57,7 +57,7 @@ const CameraViewButton = ({
       ease: 'power2.inOut',
     })
 
-    gsap.to('.camera-view-button', {
+    gsap.to('.camera-view-button, .CameraLabel', {
       autoAlpha: 0,
       duration: 1,
       ease: 'power2.inOut',
