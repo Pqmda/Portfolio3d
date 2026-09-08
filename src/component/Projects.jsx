@@ -4,8 +4,8 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import Hotel from '../assets/Images/Czarina.png'
 import Port2d from '../assets/Images/Port2d.png'
-import budoir from '../assets/Images/budoir.png'
 import loa from '../assets/Images/loasurvey.png'
+import budoir from '../assets/Images/Budoir.png'
 
 const Projects = () => {
   const projectCards = [
