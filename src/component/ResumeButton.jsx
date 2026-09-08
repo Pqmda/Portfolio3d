@@ -20,7 +20,7 @@ const defaultStyle = {
 const ResumeButton = ({ style }) => {
   return (
     
-      <a href="/Cedric_Valencia.pdf"
+      <a href="/Cedric Valencia.pdf"
       download
       className="resume-button"
       style={{ ...defaultStyle, ...style }}

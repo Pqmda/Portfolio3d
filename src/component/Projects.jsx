@@ -4,8 +4,8 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import Hotel from '../assets/Images/Czarina.png'
 import Port2d from '../assets/Images/Port2d.png'
-import tableLampImage from '../assets/Images/Minimalist Table Lamp.png'
-import budoir from '../assets/Images/Budoir.png'
+import budoir from '../assets/Images/budoir.png'
+import loa from '../assets/Images/loasurvey.png'
 
 const Projects = () => {
   const projectCards = [
@@ -32,6 +32,14 @@ const Projects = () => {
       subtitle: 'https://github.com/Pqmda/Bag3d',
       buttonLabel: 'See project',
       url: 'https://budoir-3d.vercel.app/',
+    },
+    {
+      src: loa,
+      alt: 'LOA Survey Site',
+      title: 'LOA Survey Site',
+      subtitle: 'https://github.com/Pqmda/LOASurvey',
+      buttonLabel: 'See project',
+      url: 'https://loa-survey.vercel.app/',
     },
   ]
 
